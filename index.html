@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Cross Checker</h1>
+<input id="input" placeholder="Enter text..."/>
+<button id="enter" onClick="checkInput()">Check text</button>
+<br><br>
+<input type="file" id="file" accept=".csv"/>
+<button id="reset" onClick="resetPage()">Reset</button>
+
+<p id="instructions">Cross Checker will read through inputted text and compare it against your list of incorrect and correct items in your .csv file. Your file should have two columns with the first row being your chosen heading text.</br></br>
+<strong>Spreadsheet layout example:</strong></p>
+
+<table id="example">
+<tr><td> </td><td>A</td><td>B</td></tr>
+<tr><td>1</td><td>Incorrect</td><td>Correct</td></tr>
+<tr><td>2</td><td>manger</td><td>manager</td></tr>
+<tr><td>3</td><td>john</td><td>John</td></tr>
+<tr><td>4</td><td>key performance indicators</td><td>KPI</td></tr>
+<tr><td>5</td><td>PR</td><td>public relations</td></tr>
+<tr><td>6</td><td>high risk</td><td>high-risk</td></tr>
+<tr><td>7</td><td>..</td><td>Delete second full stop.</td></tr>
+<tr><td>8</td><td>&nbsp;:</td><td>Delete space before colon.</td></tr>
+</table>
+
+<p id="feedback_incorrect"></p>
+<table id="result_incorrect"></table>
+<p id="feedback_correct"></p>
+<table id="result_correct"></table>
+
+<script src="scripts.js"></script>
+</body>
+</html>
